@@ -6,14 +6,33 @@
     <description>Recent content in 知识储备 on yfliu 的 知识体系</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Mar 2023 14:21:29 +0800</lastBuildDate><atom:link href="https://blog.yfliu.site/tags/%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 14:21:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/tags/%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Actions 实战</title>
+      <link>https://blog.yfliu.site/notes/github-actions%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 08 May 2023 14:21:39 +0000</pubDate>
+      
+      <guid>https://blog.yfliu.site/notes/github-actions%E5%AE%9E%E6%88%98/</guid>
+      <description>Github Actions 实战 最近新买了个188十年的域名，想着把它利用起来。
+原本本网站服务器位于境内，其实是有ICP备案的，而我人主要在国外，总觉得有点不方便。
+在此之前，我的文章和Hugo都放置在一起，放置在服务器上。这就导致每次写完文章都要单独ssh进服务器构建。这就非常麻烦。想必也能看到我到现在拢共也没写几篇，只是闲的慌的时候才来写一写。
+痛定思痛，我准备尽量在本地使用Typora书写，然后致力于实现一个Push就可以同时发布在境内境外两个网站上的能力。
+在了解了一番之后，我决定依靠GitHub Actions来实现这一点。
+大体架构 Contents -&amp;gt; Blog Resources(Hugo themes) -&amp;gt; GitHub Pages
+由于大部分普通的方法是将content和blog resources放在一起了，虽然这可以省下来一步，但是很不优雅啊。在开始写文章之前就已经被文件夹下那么多其实和文章内容无关的文件夹和文件弄烦了。
+最终我决定将文章内容单独拿出来放在一个储存库中。
+Contents 储存库中设置了一个Action，当储存库有push时，将contents的内容更新到Blog 存储库中。最终的实现及其简单粗暴，能跑就行：
+name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v2 - name: Clone destination repository run: | git clone https://*******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git git clone https://******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git cd Blog git config user.name &amp;#34;*****&amp;#34; git config user.email &amp;#34;*****&amp;#34; rm -rf content cd .</description>
+    </item>
+    
     <item>
       <title>在工作中遇到的各种知识的归纳</title>
       <link>https://blog.yfliu.site/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</link>
       <pubDate>Wed, 15 Mar 2023 14:21:29 +0800</pubDate>
       
       <guid>https://blog.yfliu.site/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</guid>
-      <description>在工作中遇到的各种知识归纳 大体的项目结构 GateWay的主要作用 </description>
+      <description>遇到的各种知识归纳 关于GitHub Actions的各种问题 关于
+大体的项目结构 GateWay的主要作用 </description>
     </item>
     
   </channel>
