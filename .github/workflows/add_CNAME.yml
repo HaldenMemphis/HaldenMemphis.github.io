@@ -1,0 +1,22 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
+on:
+ push:
+    branches:
+      - master  # Set a branch to deploy
+ pull_request:
+ # Allows you to run this workflow manually from the Actions tab
+ workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: "CNAME"
+          FILE_DATA: "blog.yfliu.site"
