@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>yfliu 的 知识体系</title>
-    <link>https://blog.yfliu.site/</link>
-    <description>Recent content on yfliu 的 知识体系</description>
+    <title>Posts on yfliu 的 知识体系</title>
+    <link>https://blog.yfliu.site/posts/</link>
+    <description>Recent content in Posts on yfliu 的 知识体系</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 08 May 2023 14:21:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 14:21:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github Actions 实战</title>
       <link>https://blog.yfliu.site/posts/notes/github-actions%E5%AE%9E%E6%88%98/</link>
@@ -152,15 +152,6 @@ iRoot盖髓，垫底，3M Z350 + 流动性树脂充填 这就是我的治疗方�
       
       <guid>https://blog.yfliu.site/posts/guapi/guapiguide/</guid>
       <description>瓜皮喂养指北 - 序言 本指北旨在为 陈瓜皮 的生活做出指导，包括但不限于，生活，医疗，以及最重要的 紧急情况指南。</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://blog.yfliu.site/about/</link>
-      <pubDate>Thu, 28 Apr 2022 17:27:34 +0800</pubDate>
-      
-      <guid>https://blog.yfliu.site/about/</guid>
-      <description>Yifan Liu </description>
     </item>
     
     <item>
