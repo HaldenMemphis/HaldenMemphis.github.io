@@ -140,8 +140,9 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
 </span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">git add .</span>
 </span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">git commit -m &#39;update content&#39;</span>
 </span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">git push origin master</span>
-</span></span></code></pre></div><p>而在Blog存储库中，则使用了如下Hugo的构建命令</p>
-
+</span></span></code></pre></div><p>而在Blog存储库中，则使用了如下Hugo的构建命令：</p>
+<pre tabindex="0"><code>wait for complete
+</code></pre>
   
   </div>
 </article>
