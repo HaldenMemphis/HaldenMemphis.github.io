@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>yfliu 的 知识体系</title>
-    <link>https://www.jasondennis.top/</link>
+    <link>https://blog.yfliu.site/</link>
     <description>Recent content on yfliu 的 知识体系</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 08 May 2023 14:21:39 +0000</lastBuildDate><atom:link href="https://www.jasondennis.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 14:21:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github Actions 实战</title>
-      <link>https://www.jasondennis.top/posts/notes/github-actions%E5%AE%9E%E6%88%98/</link>
+      <link>https://blog.yfliu.site/posts/notes/github-actions%E5%AE%9E%E6%88%98/</link>
       <pubDate>Mon, 08 May 2023 14:21:39 +0000</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/notes/github-actions%E5%AE%9E%E6%88%98/</guid>
+      <guid>https://blog.yfliu.site/posts/notes/github-actions%E5%AE%9E%E6%88%98/</guid>
       <description>Github Actions 实战 最近新买了个188十年的域名，想着把它利用起来。
 原本本网站服务器位于境内，其实是有ICP备案的，而我人主要在国外，总觉得有点不方便。
 在此之前，我的文章和Hugo都放置在一起，放置在服务器上。这就导致每次写完文章都要单独ssh进服务器构建。这就非常麻烦。想必也能看到我到现在拢共也没写几篇，只是闲的慌的时候才来写一写。
@@ -27,39 +27,39 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
     
     <item>
       <title>我是一个社会主义者吗?</title>
-      <link>https://www.jasondennis.top/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-2/</link>
+      <link>https://blog.yfliu.site/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-2/</link>
       <pubDate>Sun, 07 May 2023 11:01:17 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-2/</guid>
+      <guid>https://blog.yfliu.site/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-2/</guid>
       <description>我是一个社会主义者吗？ 资本主义制度的固有矛盾 资本主义制度源于竞争。 竞争是促使在资本主义制度下，生产力发展的源动力。 具体表现为，公司之间的竞争，资本之间的竞争，甚至，工人阶级之间的竞争。颇有一种物竞天择，适者生存的意味。
 资本主义制度存在瓦解的先天趋势 这带来的后果是，竞争能力不足的资本将会被淘汰。而我们知道，社会部门被划分为两个部分，由资本掌握的生产者，和工人阶级代表的消费者。资本出于利润最大化的竞争诉求，会致力于提升商品价格和压低劳动力价格（当然，在资本主义制度下，劳动力也成为了对资本而言的商品）。这会带来一个悖论，过低的劳动力价格使得消费者无法有足够的能力购买被提价的商品，自此，资本主义的利润最大化便不可持续。资本主义宣称的生产消费循环无法进行。 这意味着循环无法彻底建立，资本主义制度不会存在稳定状态，只会从不稳定状态奔向另一个不稳定状态。因而，资本主义制度存在瓦解的先天趋势。</description>
     </item>
     
     <item>
       <title>在工作中遇到的各种知识的归纳</title>
-      <link>https://www.jasondennis.top/posts/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</link>
+      <link>https://blog.yfliu.site/posts/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</link>
       <pubDate>Wed, 15 Mar 2023 14:21:29 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</guid>
+      <guid>https://blog.yfliu.site/posts/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</guid>
       <description>遇到的各种知识归纳 关于GitHub Actions的各种问题 关于
 大体的项目结构 GateWay的主要作用 </description>
     </item>
     
     <item>
       <title>去码头整点薯条</title>
-      <link>https://www.jasondennis.top/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1/</link>
+      <link>https://blog.yfliu.site/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1/</link>
       <pubDate>Fri, 22 Jul 2022 11:01:17 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1/</guid>
+      <guid>https://blog.yfliu.site/posts/articals/%E5%8E%BB%E7%A0%81%E5%A4%B4%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1/</guid>
       <description>去码头整点薯条 如何认识我自己？ </description>
     </item>
     
     <item>
       <title>没事不要拔智齿</title>
-      <link>https://www.jasondennis.top/posts/articals/%E6%B2%A1%E4%BA%8B%E4%B8%8D%E8%A6%81%E6%8B%94%E6%99%BA%E9%BD%BF/</link>
+      <link>https://blog.yfliu.site/posts/articals/%E6%B2%A1%E4%BA%8B%E4%B8%8D%E8%A6%81%E6%8B%94%E6%99%BA%E9%BD%BF/</link>
       <pubDate>Fri, 22 Jul 2022 10:01:03 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/articals/%E6%B2%A1%E4%BA%8B%E4%B8%8D%E8%A6%81%E6%8B%94%E6%99%BA%E9%BD%BF/</guid>
+      <guid>https://blog.yfliu.site/posts/articals/%E6%B2%A1%E4%BA%8B%E4%B8%8D%E8%A6%81%E6%8B%94%E6%99%BA%E9%BD%BF/</guid>
       <description>人生忠告 - 没事别老想着去拔智齿 楼主的牙近一年来可谓是命途多舛，在这8个月的时间内，补牙4次，拔智齿3次，拆线1次，洗牙2次，补牙掉了再补1次，短短的8个月内，楼主坐上了 11次 牙科椅，属实患上了 牙科椅PTSD。想必还是有些心得的。
 最大的忠告就是 - 没事别老想着去拔智齿 让我来为你讲述我命途多舛的牙的历史： 2021年12月，我突然发现，刷牙的时候牙龈非常容易出血。心想：那这估计是得洗牙了，牙结石或许有些多了。事实证明，我还是过于天真了。
 在这次坐上牙科椅之前，楼主的牙口倍儿好，吃嘛嘛香，除了每年一次的洗牙，几乎从未躺在牙科椅上过。
@@ -83,38 +83,38 @@ iRoot盖髓，垫底，3M Z350 + 流动性树脂充填 这就是我的治疗方�
     
     <item>
       <title>参考清单 -- 食物</title>
-      <link>https://www.jasondennis.top/posts/guapi/lives/lives_feed_foods_list/</link>
+      <link>https://blog.yfliu.site/posts/guapi/lives/lives_feed_foods_list/</link>
       <pubDate>Mon, 16 May 2022 15:21:58 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/lives/lives_feed_foods_list/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/lives/lives_feed_foods_list/</guid>
       <description>参考清单 &amp;ndash; 食物 本文提供了部分已经经过验证的品牌，可以放心购买喂食。并且瓜皮大部分都尝试过，瓜吃了都说好。
 主食 冻干 生生不息 兔肉，牛肉，鸡肉 牧野奇迹 帕特 鸵鸟，火鸡，牛肉，兔肉 K9 冻干 牛肉 猫粮 法明娜（别名：法米娜） 石榴鸡肉，南瓜鸭肉，苹果猪肉，甜橙鲱鱼（建议少量短期喂食，鱼类长期喂食会对肾脏造成一定的负担） 渴望 六种鱼，鸡肉（没有那么爱吃） 渴望一定注意区分猫粮狗粮，这两个包装袋长得太像了 罐头/湿粮 巅峰/巅峰起源 全系都爱 美士 推荐，可以一分为二的餐盒，方便快捷 交响乐 推荐，很好吃 小李子 Lily&amp;rsquo;s Kitchen 小佩-小仙包 它很爱吃，特别爱 零食 </description>
     </item>
     
     <item>
       <title>Lives_feed_nutrition</title>
-      <link>https://www.jasondennis.top/posts/guapi/lives/lives_feed_nutrition/</link>
+      <link>https://blog.yfliu.site/posts/guapi/lives/lives_feed_nutrition/</link>
       <pubDate>Mon, 09 May 2022 20:12:51 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/lives/lives_feed_nutrition/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/lives/lives_feed_nutrition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>猫咪骗水指南</title>
-      <link>https://www.jasondennis.top/posts/guapi/lives/lives_feed_water/</link>
+      <link>https://blog.yfliu.site/posts/guapi/lives/lives_feed_water/</link>
       <pubDate>Mon, 09 May 2022 20:12:29 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/lives/lives_feed_water/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/lives/lives_feed_water/</guid>
       <description></description>
     </item>
     
     <item>
       <title>科学健康的喂养方式</title>
-      <link>https://www.jasondennis.top/posts/guapi/lives/lives_feed_how/</link>
+      <link>https://blog.yfliu.site/posts/guapi/lives/lives_feed_how/</link>
       <pubDate>Mon, 09 May 2022 20:12:15 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/lives/lives_feed_how/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/lives/lives_feed_how/</guid>
       <description>科学健康的喂养方式 本文介绍了什么是 科学健康的喂养方式 ，并给出了详细、可操作的指南。
 瓜皮应当吃什么样的食物 猫咪是食肉动物，他们的肠胃对于碳水化合物的消化能力很弱，并且喂食碳水化合物会更加容易引起猫咪的肠胃问题，例如：呕吐，软便，拉稀。若出现了上述症状，请转到 紧急情况指南 寻求解决方案。
 猫咪的不同主粮种类 “方便粮” &amp;ndash; 开袋即食的宠物食品
@@ -128,66 +128,66 @@ iRoot盖髓，垫底，3M Z350 + 流动性树脂充填 这就是我的治疗方�
     
     <item>
       <title>如何选择食物 – 猫粮，冻干，罐头，零食</title>
-      <link>https://www.jasondennis.top/posts/guapi/lives/lives_feed_food/</link>
+      <link>https://blog.yfliu.site/posts/guapi/lives/lives_feed_food/</link>
       <pubDate>Mon, 09 May 2022 20:12:00 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/lives/lives_feed_food/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/lives/lives_feed_food/</guid>
       <description></description>
     </item>
     
     <item>
       <title>瓜皮喂养指北 - 生活</title>
-      <link>https://www.jasondennis.top/posts/guapi/lives/lives/</link>
+      <link>https://blog.yfliu.site/posts/guapi/lives/lives/</link>
       <pubDate>Mon, 09 May 2022 19:40:09 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/lives/lives/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/lives/lives/</guid>
       <description>瓜皮喂养指北 - 生活 本模块包含了目录以及一系列流程，目录以及流程将会使用可供点击的超链接链接到详细的文章内容。
 目录 喂养 科学健康的喂养方式 如何选择食物 &amp;ndash; 猫粮，冻干，罐头，零食 喝水对瓜皮是很重要的 为什么要吃 营养品 ？ 陪伴以及玩耍 我们应该如何选择玩具？ 运动，玩耍，与增进感情 瓜皮 的动作表现了些什么？ 卫生问题 为什么要关注卫生问题？ 洗澡 剪指甲 驱虫 </description>
     </item>
     
     <item>
       <title>瓜皮喂养指北</title>
-      <link>https://www.jasondennis.top/posts/guapi/guapiguide/</link>
+      <link>https://blog.yfliu.site/posts/guapi/guapiguide/</link>
       <pubDate>Mon, 09 May 2022 15:58:32 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/guapi/guapiguide/</guid>
+      <guid>https://blog.yfliu.site/posts/guapi/guapiguide/</guid>
       <description>瓜皮喂养指北 - 序言 本指北旨在为 陈瓜皮 的生活做出指导，包括但不限于，生活，医疗，以及最重要的 紧急情况指南。</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://www.jasondennis.top/about/</link>
+      <link>https://blog.yfliu.site/about/</link>
       <pubDate>Thu, 28 Apr 2022 17:27:34 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/about/</guid>
+      <guid>https://blog.yfliu.site/about/</guid>
       <description>Yifan Liu </description>
     </item>
     
     <item>
       <title>Articals-序言</title>
-      <link>https://www.jasondennis.top/posts/articals/%E5%BA%8F%E8%A8%80-articals/</link>
+      <link>https://blog.yfliu.site/posts/articals/%E5%BA%8F%E8%A8%80-articals/</link>
       <pubDate>Mon, 25 Apr 2022 15:07:03 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/articals/%E5%BA%8F%E8%A8%80-articals/</guid>
+      <guid>https://blog.yfliu.site/posts/articals/%E5%BA%8F%E8%A8%80-articals/</guid>
       <description>Articles 章节 此章节包括了我所度过的文章，抑或是书。 或许有时候有些感悟，但是也不完全是感悟。
 详细列表如下: </description>
     </item>
     
     <item>
       <title>Notes-序言</title>
-      <link>https://www.jasondennis.top/posts/notes/%E5%BA%8F%E8%A8%80-notes/</link>
+      <link>https://blog.yfliu.site/posts/notes/%E5%BA%8F%E8%A8%80-notes/</link>
       <pubDate>Mon, 25 Apr 2022 15:06:46 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/notes/%E5%BA%8F%E8%A8%80-notes/</guid>
+      <guid>https://blog.yfliu.site/posts/notes/%E5%BA%8F%E8%A8%80-notes/</guid>
       <description>Notes 章节 本章节包括了学习各种杂七杂八知识的过程中放入笔记，以及遇到的问题的解决方法。</description>
     </item>
     
     <item>
       <title>序言</title>
-      <link>https://www.jasondennis.top/posts/notes/%E5%BA%8F%E8%A8%80/</link>
+      <link>https://blog.yfliu.site/posts/notes/%E5%BA%8F%E8%A8%80/</link>
       <pubDate>Mon, 25 Apr 2022 14:21:29 +0800</pubDate>
       
-      <guid>https://www.jasondennis.top/posts/notes/%E5%BA%8F%E8%A8%80/</guid>
+      <guid>https://blog.yfliu.site/posts/notes/%E5%BA%8F%E8%A8%80/</guid>
       <description>jdiafeji </description>
     </item>
     

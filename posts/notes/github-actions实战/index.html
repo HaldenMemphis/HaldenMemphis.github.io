@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Github Actions 实战 | yfliu 的 知识体系</title>
-  <link rel = 'canonical' href = 'https://www.jasondennis.top/posts/notes/github-actions%E5%AE%9E%E6%88%98/'>
+  <link rel = 'canonical' href = 'https://blog.yfliu.site/posts/notes/github-actions%E5%AE%9E%E6%88%98/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -27,7 +27,7 @@
 Contents 储存库中设置了一个Action，当储存库有push时，将contents的内容更新到Blog 存储库中。实现及其简单粗暴，能跑就行：
 name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v2 - name: Clone destination repository run: | git clone https://*******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git git clone https://******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git cd Blog git config user.name &#34;*****&#34; git config user.email &#34;*****&#34; rm -rf content cd ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.jasondennis.top/posts/notes/github-actions%E5%AE%9E%E6%88%98/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://blog.yfliu.site/posts/notes/github-actions%E5%AE%9E%E6%88%98/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-08T14:21:39+00:00" />
 <meta property="article:modified_time" content="2023-05-08T14:21:39+00:00" />
 
@@ -47,7 +47,7 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
   
   
   
-  <link rel="stylesheet" href="https://www.jasondennis.top/css/styles.94f653e9e151e28067a7c5dbbc4600cbd5a3c721e79faaf971e523c40f3b249b8e4f20bb57810dfffa8d559ca5c140fd56eb4cd9c0853113ad08e66afdb08bdd.css" integrity="sha512-lPZT6eFR4oBnp8XbvEYAy9WjxyHnn6r5ceUjxA87JJuOTyC7V4EN//qNVZylwUD9VutM2cCFMROtCOZq/bCL3Q=="> 
+  <link rel="stylesheet" href="https://blog.yfliu.site/css/styles.94f653e9e151e28067a7c5dbbc4600cbd5a3c721e79faaf971e523c40f3b249b8e4f20bb57810dfffa8d559ca5c140fd56eb4cd9c0853113ad08e66afdb08bdd.css" integrity="sha512-lPZT6eFR4oBnp8XbvEYAy9WjxyHnn6r5ceUjxA87JJuOTyC7V4EN//qNVZylwUD9VutM2cCFMROtCOZq/bCL3Q=="> 
 
   
   
@@ -59,7 +59,7 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
   
 
   
-<link rel="icon" type="image/png" href="https://www.jasondennis.top/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://blog.yfliu.site/images/favicon.ico" />
 
   
   
@@ -69,9 +69,9 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
   <div class="content index py4">
 
     <header id="header">
-  <a href="https://www.jasondennis.top/">
+  <a href="https://blog.yfliu.site/">
   
-    <div id="logo" style="background-image: url(https://www.jasondennis.top/images/logo.png)"></div>
+    <div id="logo" style="background-image: url(https://blog.yfliu.site/images/logo.png)"></div>
   
   <div id="title">
     <h1>yfliu 的 知识体系</h1>
@@ -141,8 +141,42 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
 </span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">git commit -m &#39;update content&#39;</span>
 </span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">git push origin master</span>
 </span></span></code></pre></div><p>而在Blog存储库中，则使用了如下Hugo的构建命令：</p>
-<pre tabindex="0"><code>wait for complete
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Sample workflow for building and deploying a Hugo site to GitHub Pages</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to Pages</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">master </span> <span style="color:#75715e"># Set a branch to deploy</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">pull_request</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#75715e"># Allows you to run this workflow manually from the Actions tab</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-20.04</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;latest&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo -D</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">external_repository</span>: <span style="color:#ae81ff">HaldenMemphis/HaldenMemphis.github.io</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">personal_token</span>: <span style="color:#ae81ff">${{ secrets.HUGO_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">main</span>
+</span></span></code></pre></div>
   
   </div>
 </article>
