@@ -191,5 +191,16 @@ iRoot盖髓，垫底，3M Z350 + 流动性树脂充填 这就是我的治疗方�
       <description>jdiafeji </description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://blog.yfliu.site/posts/notes/openmrs-%E4%B8%BAopenmrs%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Espring%E7%9A%84%E7%89%A9%E8%81%94%E7%BD%91%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%B1%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.yfliu.site/posts/notes/openmrs-%E4%B8%BAopenmrs%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Espring%E7%9A%84%E7%89%A9%E8%81%94%E7%BD%91%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%B1%95/</guid>
+      <description>[OpenMRS] 为OpenMRS开发一个基于Spring的物联网系统 OpenMRS（Open Medical Record System）是一个开源的医疗记录系统，旨在帮助医疗机构管理和维护病人的电子医疗记录（EMR）。它提供了一个可定制的平台，可以根据特定的医疗环境和需求来构建和部署电子病历系统。
+OpenMRS支持多种功能，包括患者注册、病历管理、药物管理、实验室结果跟踪、报告生成等。它的核心组件是一个灵活的数据模型，可以根据不同医疗机构的需求进行自定义。它还提供了一套开发工具和API，使开发者能够创建定制的模块和扩展功能。
+本文旨在开发一套基于Spring的物联网系统，并为OpenMRS赋予通过Plugin访问此物联网系统的能力。我们认为这将会赋予OpenMRS记录慢性病（例如：糖尿病，心脏病）患者实时生理数据的能力，并为医生的治疗、用药提供更详细的数据参考，以一定程度上改善偶发性疾病症状和生理数据难以被记录的问题。</description>
+    </item>
+    
   </channel>
 </rss>
