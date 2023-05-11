@@ -13,16 +13,16 @@
       <pubDate>Mon, 08 May 2023 14:21:39 +0000</pubDate>
       
       <guid>https://blog.yfliu.site/posts/notes/github-actions%E5%AE%9E%E6%88%98/</guid>
-      <description>Github Actions 实战 最近新买了个188十年的域名，想着把它利用起来。
+      <description>Github Actions 实践 &amp;ndash; 实现一个优雅便捷的博客快速构建发布工作流 最近新买了个188十年的域名，想着把它利用起来。
 原本本网站服务器位于境内，其实是有ICP备案的，而我人主要在国外，总觉得有点不方便。
 在此之前，我的文章和Hugo都放置在一起，放置在服务器上。这就导致每次写完文章都要单独ssh进服务器构建。这就非常麻烦。想必也能看到我到现在拢共也没写几篇，只是闲的慌的时候才来写一写。
 痛定思痛，我准备尽量在本地使用Typora书写，然后致力于实现一个Push就可以同时发布在境内境外两个网站上的能力。
 在了解了一番之后，我决定依靠GitHub Actions来实现这一点。
-大体架构 Contents -&amp;gt; Blog Resources(Pages Branch) -&amp;gt; GitHub Pages
+大体架构 推送到GitHub Pages并由CloudFlare CDN进行除中国大陆之外的全局加速 Contents -&amp;gt; Blog Resources(Pages Branch) -&amp;gt; GitHub Pages
 由于大部分普通的方法是将content和blog resources放在一起了，虽然这可以省下来一步，但是很不优雅啊。在开始写文章之前就已经被文件夹下那么多其实和文章内容无关的文件夹和文件弄烦了。
 最终我决定将文章内容单独拿出来放在一个储存库中。
 Contents 储存库中设置了一个Action，当储存库有push时，将contents的内容更新到Blog 存储库中。实现及其简单粗暴，能跑就行：
-name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v2 - name: Clone destination repository run: | git clone https://*******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git git clone https://******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git cd Blog git config user.name &amp;#34;*****&amp;#34; git config user.email &amp;#34;*****&amp;#34; rm -rf content cd .</description>
+name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v2 - name: Clone destination repository run: | git clone https://*******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git git clone https://******:${{ secrets.BLOG_TOKEN }}@github.com/*****/*****.git cd Blog git config user.name &amp;#34;*****&amp;#34; git config user.</description>
     </item>
     
     <item>
@@ -160,7 +160,7 @@ iRoot盖髓，垫底，3M Z350 + 流动性树脂充填 这就是我的治疗方�
       <pubDate>Thu, 28 Apr 2022 17:27:34 +0800</pubDate>
       
       <guid>https://blog.yfliu.site/about/</guid>
-      <description>Yifan Liu </description>
+      <description>Yifan Liu site </description>
     </item>
     
     <item>
