@@ -38,6 +38,17 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
     </item>
     
     <item>
+      <title>物联网平台的多租户实现</title>
+      <link>https://blog.yfliu.site/posts/notes/%E7%89%A9%E8%81%94%E7%BD%91%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%A4%9A%E7%A7%9F%E6%88%B7%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sat, 22 Apr 2023 10:21:39 +0000</pubDate>
+      
+      <guid>https://blog.yfliu.site/posts/notes/%E7%89%A9%E8%81%94%E7%BD%91%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%A4%9A%E7%A7%9F%E6%88%B7%E5%AE%9E%E7%8E%B0/</guid>
+      <description>物联网平台的多租户实现 一个开放的物联网平台，对多个客户实行租户隔离是十分必要的。不论是从数据安全，还是资源分配上来说，实行租户隔离都能够更好的实现逻辑数据隔离，提升数据安全性。
+**从理论上来说，实现多租户隔离有3种形式： **
+完全隔离：独立数据库 独立数据库是安全性，隔离性最高的方式 成本高，需要为每个租户架设一个独立数据库 半隔离：公用数据库，独立schema 一定程度的逻辑数据隔离 成本合理 伪隔离：共享数据表 仅采用TenantID标注数据所属租户 假货 出于成本综合考虑，平台采用了第二种方式。</description>
+    </item>
+    
+    <item>
       <title>在工作中遇到的各种知识的归纳</title>
       <link>https://blog.yfliu.site/posts/notes/%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E5%BD%92%E7%BA%B3/</link>
       <pubDate>Wed, 15 Mar 2023 14:21:29 +0800</pubDate>
