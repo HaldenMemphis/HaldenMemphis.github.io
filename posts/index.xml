@@ -61,7 +61,7 @@ name: Copy to Blog on: push: branches: [main] workflow_dispatch: jobs: copy-file
 根据需求，我们的数据库架构大体如下：
 以用户模块为例：
 为了保证性能与可用性，我们针对Postgressql，采用了三节点集群，所有的集群之间数据完全同步。在数据库中，我们设立了 iot-sys-user DB, 这个db在所有高可用节点都是通过定期任务进行同步的。在数据库中，我们采用schema进行租户隔离。我们设计了以租户代码为编号的schema，每个schema下都具有完全相同的数据表结构：
-t_sts_usr: 用户表 -&amp;gt; 负责存储用户ID，邮箱，salt，SHA256或国密加密后的密码，验证符 </description>
+t_sys_usr: 用户表 -&amp;gt; 负责存储用户ID，邮箱，salt，SHA256或国密加密后的密码，验证符，创建时间，所属租户 t_sys_usrinfo: 用户信息表，存储了用户个性化的详细信息，例如年龄，头像url，description等内容 t_sys_role: 用户权限表，本张表详细记录了用户所具有的权限。 t_sys_agreement:记录用户阅读的agreement信息，版本，以确定是否在用户登录时要求用户阅读新的用户协议 </description>
     </item>
     
     <item>
