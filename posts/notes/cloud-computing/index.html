@@ -27,8 +27,10 @@ Virtualisation 虚拟化 实现虚拟化的主要技术是 Hypervisor。Hypervis
 但是，Full Virtualisation 允许任何未经修改的操作系统和客户端程序直接在其上运行。在这里，Hypervisor实质上成为了比操作系统优先级更高的Super OS。
 代表： VMWare, Microsoft Virtual Server
 Para-Virtualisation(半虚拟化) Type-2:
-半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被HyperCalls(超调用)代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。大大提升了系统性能。
-Supported by Xen, KVM, VMware ESX" />
+半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被 HyperCalls(超调用) 代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。由于虚拟化的开销减少了，性能也提高了
+Supported by Xen, KVM, VMware ESX
+Hardware-Assisted Virtualisation(硬件辅助的虚拟化) Type-3 :
+目前，硬件设备生产商往往为虚拟化在硬件设备中增加了虚拟化功能。这些功能允许一些来自 Guest OS 的 privilege calls 直接交由CPU处理，从而越过Hypervisor的翻译过程。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.yfliu.site/posts/notes/cloud-computing/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-20T17:07:39+00:00" />
@@ -47,8 +49,10 @@ Virtualisation 虚拟化 实现虚拟化的主要技术是 Hypervisor。Hypervis
 但是，Full Virtualisation 允许任何未经修改的操作系统和客户端程序直接在其上运行。在这里，Hypervisor实质上成为了比操作系统优先级更高的Super OS。
 代表： VMWare, Microsoft Virtual Server
 Para-Virtualisation(半虚拟化) Type-2:
-半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被HyperCalls(超调用)代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。大大提升了系统性能。
-Supported by Xen, KVM, VMware ESX"/>
+半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被 HyperCalls(超调用) 代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。由于虚拟化的开销减少了，性能也提高了
+Supported by Xen, KVM, VMware ESX
+Hardware-Assisted Virtualisation(硬件辅助的虚拟化) Type-3 :
+目前，硬件设备生产商往往为虚拟化在硬件设备中增加了虚拟化功能。这些功能允许一些来自 Guest OS 的 privilege calls 直接交由CPU处理，从而越过Hypervisor的翻译过程。"/>
 
   
   
@@ -122,17 +126,33 @@ Supported by Xen, KVM, VMware ESX"/>
 <h4 id="hypervisor-的虚拟化级别">Hypervisor 的虚拟化级别</h4>
 <ul>
 <li>
-<p>Full Virtualisation (完全虚拟化) Type-1：</p>
+<p><strong>Full Virtualisation (完全虚拟化) Type-1：</strong></p>
 <p>完全虚拟化允许<strong>未经修改</strong>的客操作系统（Guest OS）隔离运行。硬件虚拟化对客操作系统隐藏了真实的硬件，虚拟机运行在一个架设在硬件或主机操作系统（Host OS）之上的Virtual Machine Monitor中。拥有完全虚拟化能力的Hypervisor，将真实的硬件特征映射到虚拟机上，并且映射出了完整的指令集，I/O, 中断/内存管理等。Guest OS并不需要知道是否运行在虚拟机内，仅需按照正常在裸机上运行的那样即可。虚拟机发出的指令需经过Hypervisor捕获并处理。这带来了一个问题：过大的开销。</p>
 <p>但是，Full Virtualisation 允许任何未经修改的操作系统和客户端程序直接在其上运行。在这里，Hypervisor实质上成为了比操作系统优先级更高的Super OS。</p>
 <p><em><strong>代表： VMWare, Microsoft Virtual Server</strong></em></p>
 </li>
 <li>
-<p>Para-Virtualisation(半虚拟化) Type-2:</p>
-<p>半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被HyperCalls(超调用)代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。大大提升了系统性能。</p>
+<p><strong>Para-Virtualisation(半虚拟化) Type-2:</strong></p>
+<p>半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被 <strong>HyperCalls(超调用)</strong> 代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。由于虚拟化的开销减少了，性能也提高了</p>
 <p><img src="https://pic.yfliu.site/cloud-img/%E6%88%AA%E5%B1%8F2023-05-24%2017.30.10.png" alt="截屏2023-05-24 17.30.10"></p>
 <p><em><strong>Supported by Xen, KVM, VMware ESX</strong></em></p>
 </li>
+<li>
+<p><strong>Hardware-Assisted Virtualisation(硬件辅助的虚拟化) Type-3 :</strong></p>
+</li>
+</ul>
+<p>目前，硬件设备生产商往往为虚拟化在硬件设备中增加了虚拟化功能。这些功能允许一些来自 Guest OS 的 <strong>privilege calls</strong> 直接交由CPU处理，从而越过Hypervisor的翻译过程。</p>
+<p><em><strong>Supported by Intel-VT AMD-V</strong></em></p>
+<p><strong>虚拟化架构的运行模式</strong></p>
+<p><img src="https://pic.yfliu.site/cloud-img/%E6%88%AA%E5%B1%8F2023-05-24%2017.42.07.png" alt="截屏2023-05-24 17.42.07"></p>
+<p>​	a) 操作系统在特权模式下执行</p>
+<p>​	b) VMM在特权模式下运行</p>
+<p>​	c) 受信任的主机操作系统在托管的虚拟机系统中以特权模式执行。客户操作系统驻留在虚拟机	中，以较低的特权级别运行。</p>
+<p>​	d) VMM的一部分在特权模式下运行。</p>
+<p><strong>References</strong></p>
+<ul>
+<li>Cloud Computing for Science and Engineering. I. Foster and D.B. Gannon. MIT Press, 2017</li>
+<li>S. Bhowmik, <em>Cloud computing.</em> Cambridge University Press, Chapter 7, 2017</li>
 </ul>
 
   

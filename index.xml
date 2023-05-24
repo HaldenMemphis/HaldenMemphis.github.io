@@ -24,8 +24,10 @@ Virtualisation 虚拟化 实现虚拟化的主要技术是 Hypervisor。Hypervis
 但是，Full Virtualisation 允许任何未经修改的操作系统和客户端程序直接在其上运行。在这里，Hypervisor实质上成为了比操作系统优先级更高的Super OS。
 代表： VMWare, Microsoft Virtual Server
 Para-Virtualisation(半虚拟化) Type-2:
-半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被HyperCalls(超调用)代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。大大提升了系统性能。
-Supported by Xen, KVM, VMware ESX</description>
+半虚拟化要求操作系统进行了适应性修改: 将会拥有于Hypervisor交互的API，服从Hypervisor的调度。同时，经过修改的Host OS使得非虚拟化指令被 HyperCalls(超调用) 代替，这允许Applications直接调用系统底层资源，无需经过Hypervisor翻译。由于虚拟化的开销减少了，性能也提高了
+Supported by Xen, KVM, VMware ESX
+Hardware-Assisted Virtualisation(硬件辅助的虚拟化) Type-3 :
+目前，硬件设备生产商往往为虚拟化在硬件设备中增加了虚拟化功能。这些功能允许一些来自 Guest OS 的 privilege calls 直接交由CPU处理，从而越过Hypervisor的翻译过程。</description>
     </item>
     
     <item>
