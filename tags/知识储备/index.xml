@@ -8,6 +8,17 @@
     <language>zh-cn</language>
     <lastBuildDate>Mon, 22 May 2023 17:07:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/tags/%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Containers 容器</title>
+      <link>https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/</link>
+      <pubDate>Mon, 22 May 2023 17:07:39 +0000</pubDate>
+      
+      <guid>https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/</guid>
+      <description>Containers 容器 Containers 与 Virtual Machine 最大的不同是：
+Containers 虚拟的并不是硬件，而是操作系统
+Containers致力于虚拟一个干净，正确，稳定，安全的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。</description>
+    </item>
+    
+    <item>
       <title>Virtualisation 虚拟化</title>
       <link>https://blog.yfliu.site/posts/notes/%E8%99%9A%E6%8B%9F%E5%8C%96/</link>
       <pubDate>Mon, 22 May 2023 17:07:39 +0000</pubDate>
