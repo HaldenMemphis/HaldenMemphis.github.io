@@ -17,16 +17,28 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:title" content="Cloud Computing" />
 <meta property="og:description" content="Cloud Computing知识架构 Cloud Platform Architecture 云计算的主要架构区分为，Private，Public 以及 Hybrid。
-Private (私有云) 架构：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于开发环境，测试环境。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的生产环境。" />
+Private (私有云) 架构：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于开发环境，测试环境。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的生产环境。
+Public(公有云)架构：适合于初创公司，并不持有大型规模化数据中心的公司，个人开发者，对于性能需求变化较大的公司。问题需要考虑数据安全，建议本地至少留一份冷备份。
+混合云架构：
+Virtualisation 虚拟化 实现虚拟化的主要技术是 Hypervisor。Hypervisor 提供了一种运行在物理硬件和操作系统之之间的中间层，允许多个系统访问系统硬件，并对其做出合理的调配。Hypervisor也可以叫做Virtual Machine Manager/Monitor (VMM) 。
+我们可以理解，Hypervisor 是 操作系统 的 操作系统，相较于操作系统拥有更低的层级，为操作系统提供服务。
+虚拟化的实现层级 Hypervisor 的虚拟化级别 Full Virtualisation (完全虚拟化)：
+完全虚拟化" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.yfliu.site/posts/notes/cloud-computing/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-05-21T17:07:39+00:00" />
-<meta property="article:modified_time" content="2023-05-21T17:07:39+00:00" />
+<meta property="article:published_time" content="2023-05-20T17:07:39+00:00" />
+<meta property="article:modified_time" content="2023-05-20T17:07:39+00:00" />
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cloud Computing"/>
 <meta name="twitter:description" content="Cloud Computing知识架构 Cloud Platform Architecture 云计算的主要架构区分为，Private，Public 以及 Hybrid。
-Private (私有云) 架构：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于开发环境，测试环境。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的生产环境。"/>
+Private (私有云) 架构：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于开发环境，测试环境。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的生产环境。
+Public(公有云)架构：适合于初创公司，并不持有大型规模化数据中心的公司，个人开发者，对于性能需求变化较大的公司。问题需要考虑数据安全，建议本地至少留一份冷备份。
+混合云架构：
+Virtualisation 虚拟化 实现虚拟化的主要技术是 Hypervisor。Hypervisor 提供了一种运行在物理硬件和操作系统之之间的中间层，允许多个系统访问系统硬件，并对其做出合理的调配。Hypervisor也可以叫做Virtual Machine Manager/Monitor (VMM) 。
+我们可以理解，Hypervisor 是 操作系统 的 操作系统，相较于操作系统拥有更低的层级，为操作系统提供服务。
+虚拟化的实现层级 Hypervisor 的虚拟化级别 Full Virtualisation (完全虚拟化)：
+完全虚拟化"/>
 
   
   
@@ -89,7 +101,21 @@ Private (私有云) 架构：适合重视数据安全风险的，有合规要求
     <h1 id="cloud-computing知识架构">Cloud Computing知识架构</h1>
 <h3 id="cloud-platform-architecture">Cloud Platform Architecture</h3>
 <p>云计算的主要架构区分为，Private，Public 以及 Hybrid。</p>
-<p>Private (私有云) 架构：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于<code>开发环境</code>，<code>测试环境</code>。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的<code>生产环境</code>。</p>
+<p><strong>Private (私有云) 架构</strong>：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于<code>开发环境</code>，<code>测试环境</code>。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的<code>生产环境</code>。</p>
+<p><strong>Public(公有云)架构</strong>：适合于初创公司，并不持有大型规模化数据中心的公司，个人开发者，对于性能需求变化较大的公司。问题需要考虑数据安全，建议本地至少留一份冷备份。</p>
+<p><strong>混合云架构：</strong></p>
+<h3 id="virtualisation-虚拟化">Virtualisation 虚拟化</h3>
+<p>实现虚拟化的主要技术是 <strong>Hypervisor</strong>。Hypervisor 提供了一种运行在物理硬件和操作系统之之间的中间层，允许多个系统访问系统硬件，并对其做出合理的调配。Hypervisor也可以叫做<code>Virtual Machine Manager/Monitor (VMM)</code> 。</p>
+<p>我们可以理解，Hypervisor 是 操作系统 的 操作系统，相较于操作系统拥有更低的层级，为操作系统提供服务。</p>
+<h4 id="虚拟化的实现层级">虚拟化的实现层级</h4>
+<p><img src="https://pico-1257283959.cos.accelerate.myqcloud.com/cloud-img/%E6%88%AA%E5%B1%8F2023-05-24%2015.50.23.png" alt="截屏2023-05-24 15.50.23"></p>
+<h4 id="hypervisor-的虚拟化级别">Hypervisor 的虚拟化级别</h4>
+<ul>
+<li>
+<p>Full Virtualisation (完全虚拟化)：</p>
+<p>完全虚拟化</p>
+</li>
+</ul>
 
   
   </div>
