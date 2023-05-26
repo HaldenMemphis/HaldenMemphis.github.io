@@ -18,7 +18,9 @@
   <meta property="og:title" content="Containers 容器" />
 <meta property="og:description" content="Containers 容器 Containers 与 Virtual Machine 最大的不同是：
 Containers 虚拟的并不是硬件，而是操作系统
-Containers致力于虚拟一个干净，正确，稳定，安全的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。" />
+Containers致力于虚拟一个干净，正确，稳定，安全的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。
+Containers 与 VM 的区别 如上图所示：
+Type 1 在VM与硬件之间插入了一层Hypervisor(VMM)，同时Hypervisor直接接触硬件。 Type 2 Hypervisor在Host OS上运行，或者Hypervisor本身作为了Host OS Containers 本身作为运行环境存在，轻量化。不对硬件进行抽象，而是提供 &ldquo;enhanced chroot&rdquo;，使用通用内核创建隔离的环境。 本质上，这些虚拟化技术都是一种“抽象接口的”技术，将硬件/接口重新抽象统一。因而，抽象层所在的层级和位置将会对性能产生影响。 它们的目的都是将复杂的现有硬件环境/软件环境抽象为一个统一自洽的软件接口栈。 Differences 容器十分轻量，有着更佳的性能 移植性：VM(GB), Container(MB)。VM需要考虑硬件和VMM。 性能：VM: 几分钟启动，Container: 几秒启动 没有VMM和Host OS的额外开销，使得容器消耗的CPU和内存更少 管理成本：每个虚拟机都需要一个完整的功能性操作系统，然后再进行额外的管理 Containers适合用于 Devops，Microservices，Batch Computing " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-22T17:07:39+00:00" />
@@ -28,7 +30,9 @@ Containers致力于虚拟一个干净，正确，稳定，安全的操作系统�
 <meta name="twitter:title" content="Containers 容器"/>
 <meta name="twitter:description" content="Containers 容器 Containers 与 Virtual Machine 最大的不同是：
 Containers 虚拟的并不是硬件，而是操作系统
-Containers致力于虚拟一个干净，正确，稳定，安全的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。"/>
+Containers致力于虚拟一个干净，正确，稳定，安全的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。
+Containers 与 VM 的区别 如上图所示：
+Type 1 在VM与硬件之间插入了一层Hypervisor(VMM)，同时Hypervisor直接接触硬件。 Type 2 Hypervisor在Host OS上运行，或者Hypervisor本身作为了Host OS Containers 本身作为运行环境存在，轻量化。不对硬件进行抽象，而是提供 &ldquo;enhanced chroot&rdquo;，使用通用内核创建隔离的环境。 本质上，这些虚拟化技术都是一种“抽象接口的”技术，将硬件/接口重新抽象统一。因而，抽象层所在的层级和位置将会对性能产生影响。 它们的目的都是将复杂的现有硬件环境/软件环境抽象为一个统一自洽的软件接口栈。 Differences 容器十分轻量，有着更佳的性能 移植性：VM(GB), Container(MB)。VM需要考虑硬件和VMM。 性能：VM: 几分钟启动，Container: 几秒启动 没有VMM和Host OS的额外开销，使得容器消耗的CPU和内存更少 管理成本：每个虚拟机都需要一个完整的功能性操作系统，然后再进行额外的管理 Containers适合用于 Devops，Microservices，Batch Computing "/>
 
   
   
@@ -92,6 +96,28 @@ Containers致力于虚拟一个干净，正确，稳定，安全的操作系统�
 <p>Containers 与 Virtual Machine 最大的不同是：</p>
 <p><strong>Containers 虚拟的并不是硬件，而是操作系统</strong></p>
 <p>Containers致力于虚拟一个<code>干净，正确，稳定，安全</code>的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。</p>
+<h5 id="containers-与-vm-的区别">Containers 与 VM 的区别</h5>
+<p><img src="https://pic.yfliu.site/cloud-img/%E6%88%AA%E5%B1%8F2023-05-26%2014.36.24.png" alt="截屏2023-05-26 14.36.24"></p>
+<p>如上图所示：</p>
+<ul>
+<li>Type 1 在VM与硬件之间插入了一层Hypervisor(VMM)，同时Hypervisor直接接触硬件。</li>
+<li>Type 2 Hypervisor在Host OS上运行，或者Hypervisor本身作为了Host OS</li>
+<li>Containers 本身作为运行环境存在，轻量化。不对硬件进行抽象，而是提供 &ldquo;enhanced chroot&rdquo;，使用通用内核创建隔离的环境。</li>
+<li>本质上，这些虚拟化技术都是一种“抽象接口的”技术，将硬件/接口重新抽象统一。因而，抽象层所在的层级和位置将会对性能产生影响。</li>
+<li>它们的目的都是将复杂的现有硬件环境/软件环境抽象为一个统一自洽的软件接口栈。</li>
+</ul>
+<h5 id="differences"><strong>Differences</strong></h5>
+<ul>
+<li>容器十分轻量，有着更佳的性能
+<ul>
+<li>移植性：VM(GB), Container(MB)。VM需要考虑硬件和VMM。</li>
+<li>性能：VM: 几分钟启动，Container: 几秒启动</li>
+<li>没有VMM和Host OS的额外开销，使得容器消耗的CPU和内存更少</li>
+<li>管理成本：每个虚拟机都需要一个完整的功能性操作系统，然后再进行额外的管理</li>
+</ul>
+</li>
+<li>Containers适合用于 Devops，Microservices，Batch Computing</li>
+</ul>
 
   
   </div>
