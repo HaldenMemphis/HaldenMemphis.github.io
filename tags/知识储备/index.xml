@@ -9,6 +9,17 @@
     <lastBuildDate>Wed, 24 May 2023 17:07:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/tags/%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virtual Infrastructure Manager</title>
+      <link>https://blog.yfliu.site/posts/notes/mapreduce/</link>
+      <pubDate>Wed, 24 May 2023 17:07:39 +0000</pubDate>
+      
+      <guid>https://blog.yfliu.site/posts/notes/mapreduce/</guid>
+      <description>Mapreduce mapreduce的特点
+Map的输出和Reduce的输入/输出始终是&amp;lt;key, value&amp;gt;对
+MapReduce非常适用于那些 &amp;ldquo;子问题 &amp;ldquo;不相互依赖的问题</description>
+    </item>
+    
+    <item>
+      <title>Virtual Infrastructure Manager</title>
       <link>https://blog.yfliu.site/posts/notes/vim/</link>
       <pubDate>Wed, 24 May 2023 17:07:39 +0000</pubDate>
       
