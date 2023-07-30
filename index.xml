@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yfliu 的 知识体系</title><link>https://blog.yfliu.site/</link><description>Recent content on yfliu 的 知识体系</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 08 Jul 2023 11:21:39 +0000</lastBuildDate><atom:link href="https://blog.yfliu.site/index.xml" rel="self" type="application/rss+xml"/><item><title>[OpenMRS-架构设计]为何选择Clickhouse</title><link>https://blog.yfliu.site/posts/notes/%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9clickhouse/</link><pubDate>Sat, 08 Jul 2023 11:21:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9clickhouse/</guid><description>为何选择Clickhouse &amp;ndash; 为OpenMRS开发一个基于Spring的物联网系统 本项目虽然实现的仅仅只是一个简单的血糖监测的物联网系统，但是我们可以敏锐的察觉到，所记录下的患者的医疗数据，对于科研和数据分析带来的价值。当然， 这必须在符合道德规范的前提下开展。因此本项目并不会实现这些。但是，本项目在设计之时，也尽可能考虑到未来可能的对数据的利用。因此，本项目也为未来对数据进行分析，从架构层面留下便利。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yfliu 的 知识体系</title><link>https://blog.yfliu.site/</link><description>Recent content on yfliu 的 知识体系</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 20:12:00 +0800</lastBuildDate><atom:link href="https://blog.yfliu.site/index.xml" rel="self" type="application/rss+xml"/><item><title>二手二手出二手</title><link>https://blog.yfliu.site/posts/hiden/%E4%BA%8C%E6%89%8B%E4%BA%8C%E6%89%8B%E5%87%BA%E4%BA%8C%E6%89%8B/</link><pubDate>Sun, 30 Jul 2023 20:12:00 +0800</pubDate><guid>https://blog.yfliu.site/posts/hiden/%E4%BA%8C%E6%89%8B%E4%BA%8C%E6%89%8B%E5%87%BA%E4%BA%8C%E6%89%8B/</guid><description>二手二手出二手 [TOC]
+总则 价是可以讲的，但只能讲一点点
+电子产品 大屏即生产力之95新无高刷非电竞1080pBenqEW278027英寸显示器生产力工具 溢美之词：
+EW2780 | 27 英寸 FHD 16:9 HDR IPS LED 显示器
+27 英寸 1920x1080 FHD 16:9 HDR IPS LED 1080p 显示器 边到边超薄边框设计 高动态范围 (HDR) 原价：229英镑
+现价：90英镑
+图片：
+如果你想多设备连接或者使用智能家居或者用HomePod必备的菊花厂Wifi6路由器 原价：20英镑
+现价：6英镑
+**图片： **
+居家必备手机远程也可以操作定时的1-2人食智能小米电饭煲 原价：CNY 169
+现价：8英镑
+图片：
+生活用品 带滚轮的可移动宜家衣架（附宜家带5个隔层的储物空间） 原价：
+RIGGA 衣架, 白色 19英镑 SKUBB 带 6 个隔层的储物空间, 白色,35x45x125 厘米 9英镑 二手价：
+共计15英镑
+图片：
+来自Argos的2kw速热电暖器 原价：
+Challenge 2kW Convector Heater £30.00 二手价：
+6 英镑 图片：</description></item><item><title>[OpenMRS-架构设计]为何选择Clickhouse</title><link>https://blog.yfliu.site/posts/notes/%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9clickhouse/</link><pubDate>Sat, 08 Jul 2023 11:21:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9clickhouse/</guid><description>为何选择Clickhouse &amp;ndash; 为OpenMRS开发一个基于Spring的物联网系统 本项目虽然实现的仅仅只是一个简单的血糖监测的物联网系统，但是我们可以敏锐的察觉到，所记录下的患者的医疗数据，对于科研和数据分析带来的价值。当然， 这必须在符合道德规范的前提下开展。因此本项目并不会实现这些。但是，本项目在设计之时，也尽可能考虑到未来可能的对数据的利用。因此，本项目也为未来对数据进行分析，从架构层面留下便利。
 首先，我们同样可以敏锐的察觉到，血糖监测的物联网系统本质上，记录的健康数据是一种时序数据。从结构上说，这是一种不适应传统关系数据库的数据。传统的关系数据库，通常使用 B+ tree 来进行数据存储。因为 B+ tree 能够显著减少查询和顺序插入时磁盘花费在寻道上的时间。对于 90% 以上场景都是写入的时序数据库，B+ tree 很明显是不合适的。
 因此，本项目计划使用专门的时序数据库进行实时健康数据的存储。在进行对比后，本项目选择使用 Clickhouse 作为时序数据存储的基础设施。
 理由：
