@@ -17,11 +17,7 @@ RIGGA 衣架, 白色 19英镑 SKUBB 带 6 个隔层的储物空间, 白色,35x45
 图片：
 来自Argos的2kw速热电暖器 原价：
 Challenge 2kW Convector Heater £30.00 二手价：
-6 英镑 图片：</description></item><item><title>[OpenMRS-架构设计]为何选择Clickhouse</title><link>https://blog.yfliu.site/posts/notes/%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9clickhouse/</link><pubDate>Sat, 08 Jul 2023 11:21:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9clickhouse/</guid><description>为何选择Clickhouse &amp;ndash; 为OpenMRS开发一个基于Spring的物联网系统 本项目虽然实现的仅仅只是一个简单的血糖监测的物联网系统，但是我们可以敏锐的察觉到，所记录下的患者的医疗数据，对于科研和数据分析带来的价值。当然， 这必须在符合道德规范的前提下开展。因此本项目并不会实现这些。但是，本项目在设计之时，也尽可能考虑到未来可能的对数据的利用。因此，本项目也为未来对数据进行分析，从架构层面留下便利。
-首先，我们同样可以敏锐的察觉到，血糖监测的物联网系统本质上，记录的健康数据是一种时序数据。从结构上说，这是一种不适应传统关系数据库的数据。传统的关系数据库，通常使用 B+ tree 来进行数据存储。因为 B+ tree 能够显著减少查询和顺序插入时磁盘花费在寻道上的时间。对于 90% 以上场景都是写入的时序数据库，B+ tree 很明显是不合适的。
-因此，本项目计划使用专门的时序数据库进行实时健康数据的存储。在进行对比后，本项目选择使用 Clickhouse 作为时序数据存储的基础设施。
-理由：
-Clickhouse 设计为 OLAP 数据库管理系统，它设计为尽可能优秀的完成一项任务：尽可能快地过滤和聚合数据。即 Group By。这一选择使得未来，对病人的健康数据进行学术研究和数据分析留下了方便。 Clickhouse使用面向列的存储： 源数据通常包含数百甚至数千列，而报表只能使用其中的几个列。系统需要避免读取不必要的列，以避免昂贵的磁盘读取操作。Clickhouse的列式存储很好的适应了时序数据的存储。 数据压缩：Clickhouse有着完善方便的数据压缩方法。仅需通过配置文件配置即可实现。并且，类似血糖监测产生的时序数据，非常适合进行压缩，从存储上有着较高的经济性。 合理的冷热分离机制：当医生或者患者查看健康数据时，往往最经常查看的是近一天，一周的数据。较少查看较早的数据。Clickhouse 集群可以同时拥有SSD与HDD存储。通过Clickhouse的TTL机制，可以设定时间，将冷数据转移到经济性更佳的HDD磁盘上。 因此，本项目最终决定选用 Clickhouse 作为存储时序健康数据的基础设施。</description></item><item><title>Containers 容器</title><link>https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/</link><pubDate>Mon, 22 May 2023 17:07:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/</guid><description>Containers 容器 Containers 与 Virtual Machine 最大的不同是：
+6 英镑 图片：</description></item><item><title>Containers 容器</title><link>https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/</link><pubDate>Mon, 22 May 2023 17:07:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/%E5%AE%B9%E5%99%A8%E5%8C%96/</guid><description>Containers 容器 Containers 与 Virtual Machine 最大的不同是：
 Containers 虚拟的并不是硬件，而是操作系统
 Containers致力于虚拟一个干净，正确，稳定，安全的操作系统环境给予Applications运行。每个容器都是相互隔离的，并且由同一个操作系统kernel执行。这些容器都是安全的环境。这种方式提供了比传统虚拟化更高的效率和性能，同时也是一种更轻量的虚拟化。
 Containers 与 VM 的区别 如上图所示：
