@@ -34,8 +34,8 @@ Hardware-Assisted Virtualisation(硬件辅助的虚拟化) Type-3 :
 目前，硬件设备生产商往往为虚拟化在硬件设备中增加了虚拟化功能。这些功能允许一些来自 Guest OS 的 privilege calls 直接交由CPU处理，从而越过Hypervisor的翻译过程。
 Supported by Intel-VT AMD-V
 虚拟化架构的运行模式
-​ a) 操作系统在特权模式下执行
-​ b) VMM在特权模式下运行</description></item><item><title>Cloud Computing</title><link>https://blog.yfliu.site/posts/notes/cloud-computing/</link><pubDate>Sat, 20 May 2023 17:07:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/cloud-computing/</guid><description>Cloud Computing知识架构 Cloud Platform Architecture 云计算的主要架构区分为，Private，Public 以及 Hybrid。
+​	a) 操作系统在特权模式下执行
+​	b) VMM在特权模式下运行</description></item><item><title>Cloud Computing</title><link>https://blog.yfliu.site/posts/notes/cloud-computing/</link><pubDate>Sat, 20 May 2023 17:07:39 +0000</pubDate><guid>https://blog.yfliu.site/posts/notes/cloud-computing/</guid><description>Cloud Computing知识架构 Cloud Platform Architecture 云计算的主要架构区分为，Private，Public 以及 Hybrid。
 Private (私有云) 架构：适合重视数据安全风险的，有合规要求的，希望将数据完全把握在自己手里的客户，例如金融机构，或自有数据中心的。同样这部分架构往往适用于开发环境，测试环境。利于在开发和测试过程中精准定位问题，最终推送到位于公有云上的生产环境。
 Public(公有云)架构：适合于初创公司，并不持有大型规模化数据中心的公司，个人开发者，对于性能需求变化较大的公司。问题需要考虑数据安全，建议本地至少留一份冷备份。
 混合云架构：
